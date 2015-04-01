@@ -1,0 +1,39 @@
+---
+layout: default
+title: SAM_api V1 Basics
+---
+
+<section class="main-content" role="main">
+<h3 id="api-basics">API basics</h3>
+
+<p>The SAM API is a GET API which has one operation. The operation will retrieve an entity’s public information. Its endpoint is <code>https://api.data.gov/sam/v1/registrations/</code>. </p>
+
+<p>A couple basic notes: the rate limits for the API are currently 5,000 calls per 24 hours and 5 calls per 5 seconds. As we go forward and understand the impact of usage of the API on SAM, we will adjust the limits accordingly as well as allow for individual users with specific needs to have customized rate limits appropriate to their use.</p>
+
+<h5 id="example-url">Example URL</h5>
+
+<p>Currently, the below URL won’t work without you adding in an API key from api.data.gov. Replace <code>&lt;YOUR_API_KEY&gt;</code> with your api.data.gov provided API key in the below URL to successfully execute the call.</p>
+
+<p><a href="https://api.data.gov/sam/v1/registrations/1459697830000?api_key=YOUR_API_KEY">https://api.data.gov/sam/v1/registrations/1459697830000?api_key=YOUR_API_KEY</a></p>
+
+<h5 id="retrieving-entity-information">Retrieving entity information</h5>
+<p>The endpoint for getting all data begins with <code>/v1/registrations</code>. </p>
+
+<p>The endpoint takes a single URL parameter which is the DUNS and DUNS+4 information concatenated. If the entity does not have a DUNS+4, the user should include <code>0000</code>. </p>
+
+<p>For example, if an entity of interest has a DUNS number of <code>012345678</code> with no DUNS+4, the access to the endpoint would be at <code>/sam/v1/registrations/0123456780000</code>. An entity with the same DUNS but with a DUNS+4 of <code>9999</code> would be accessed at <code>/sam/v1/registrations/0123456789999</code>.</p>
+
+<p>The data in the API is updated daily by approximately 2 AM Eastern time for the prior day’s data.</p>
+
+<h5 id="finding-duns-numbers-to-use">Finding DUNS numbers to use</h5>
+
+<p>In addition to the <a href="http://gsa.github.io/sam_api/sam/search.html">search API</a>, another way to get DUNS numbers is to go to <a href="http://www.sam.gov">SAM</a>, click on <code>Search Records</code> and enter in a company into the Quick Search box. Each entity has a DUNS number that you’ll see in the result set. You’ll see a 9-digit number which represents the DUNS. You can then pad it out with four <code>0</code>s as mentioned above.</p>
+
+<h5 id="search-api">Search API</h5>
+
+<p>These are just the first of many steps in modernizing SAM and IAE. In fall 2014, the SAM API consumers added an API to search the SAM database and retrieve registration information specific to their needs. This means, most of the functionality you see on SAM right now to search for entities is available as an API. </p>
+
+<body id="basics"></body>
+
+
+    </section>
