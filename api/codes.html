@@ -13,6 +13,8 @@ title: SAM_api Codes
 <a href="#countyTypes">County Codes</a><br />
 <a href="#farTypes">ID for FAR Responses</a><br />
 <a href="#dfarTypes">ID for DFAR Responses</a><br />
+<a href="#errorTypes">Error Codes</a><br />
+
 <a name="businessTypes" id="businessTypes"></a>
 <h5>Business Types</h5>
 <div><em></em> We recommend viewing this table in landscape mode on your mobile device. </div>
@@ -403,7 +405,8 @@ title: SAM_api Codes
     </tr>
   </tbody>
 </table>
-<p>Download the JSON for this table <a href="http://gsa.github.io/sam_api/static/businessTypes.json">here</a> <a name="purposeTypes" id="purposeTypes"></a> </p>
+<p>Download the JSON for this table <a href="http://gsa.github.io/sam_api/static/businessTypes.json">here</a> 
+<a name="purposeTypes" id="purposeTypes"></a> </p>
 <h5>Purpose of Registration Types</h5>
 <table id="purpose-types">
   <colgroup>
@@ -15934,5 +15937,41 @@ title: SAM_api Codes
   </tbody>
 </table>
 <p>Download the JSON for this table <a href="http://gsa.github.io/sam_api/static/dfar.json">here</a> </p>
+
+<a name="errorCodes" id="errorCodes"></a>
+
+<p>
+<h3>Error Status Codes</h3>
+<table>
+  <thead>
+    <tr>
+      <th>HTTP Status Code</th>
+      <th>Reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="15%">200</td>
+      <td>Ok</td>
+    </tr>
+    <tr>
+      <td width="15%">403</td>
+      <td>Request for registration information forbidden</td>
+    </tr>
+    <tr>
+      <td width="15%">404</td>
+      <td>The registration could not be found</td>
+    </tr>
+    <tr>
+      <td width="15%">406</td>
+      <td>Duns number must be 13 digit long</td>
+    </tr>
+    <tr>
+      <td width="15%">500</td>
+      <td>Internal error</td>
+    </tr>
+  </tbody>
+</table>
+</p>
 
 </section>
