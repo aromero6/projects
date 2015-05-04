@@ -1,0 +1,100 @@
+---
+layout: default
+title: SAM_api Codes
+---
+
+<section class="main-content" role="main">
+
+
+<h3 id="api_calls">API calls</h3>
+<p>Explore the API here hands-on. Need a little help? Read our <a href="http://gsa.github.io/sam_api/sam/basics.html">API basics</a> to learn about   the SAM entity data. </p>
+<div id="message-bar"></div>
+<span id="swagger-ui-offset-fix"></span>
+<div id="swagger-ui-container">
+  <div id="api_info">
+    <div>SAM Registrations API</div>
+    <div>
+      <p>sam.gov is the System for Award Management. It is the site on which all vendors, grantees, receivers of federal financial assistance, and other entities doing business with the government must register prior to receiving an award.</p>
+      <p>The Registrations API currently provides the publicly available data for a specific entity along with status and progress information for that registration.</p>
+    </div>
+  </div>
+  <div id="resources_container">
+    <ul>
+      <li id="sam_swagger.json_getData_get_0">
+        <div>
+          <h3><a href="http://gsa.github.io/sam_api/sam/console/#!/sam_swagger.json/getData_get_0">get</a> <a href="http://gsa.github.io/sam_api/sam/console/#!/sam_swagger.json/getData_get_0">/v1/registrations/{registrationId}</a> </h3>
+          <ul>
+            <li><a href="http://gsa.github.io/sam_api/sam/console/#!/sam_swagger.json/getData_get_0">Find a registration by its DUN+4 number</a></li>
+          </ul>
+        </div>
+        <div id="sam_swagger.json_getData_get_0_content">
+          <h4>Implementation Notes</h4>
+          <p>If the entity only has a 9-digit DUNS number, pad the end to include 4 zeros</p>
+          <h4>Response Class</h4>
+          <div>
+            <div>
+              <ul>
+                <li><a href="http://gsa.github.io/sam_api/sam/console/#"> Model </a></li>
+                <li><a href="http://gsa.github.io/sam_api/sam/console/#"> Model Schema </a></li>
+              </ul>
+              <div>
+                <div>
+                  <div>SAM Registration {
+                    <div>duns (string),</div>
+                    <div>duns4 (string, optional),</div>
+                    <div>cage (string, optional),</div>
+                    <div>ncage (string, optional),</div>
+                    <div>dodaac (string, optional),</div>
+                    <div>purposeOfRegistration (string) = ['IGT_ONLY' or 'IGT_FEDERAL_ASSISTANCE' or 'IGT_ALL_AWARDS' or 'FEDERAL_ASSISTANCE' or 'ALL_AWARDS'],</div>
+                    <div>registrationDate (date),</div>
+                    <div>expirationDate (date),</div>
+                    <div>activationDate (date),</div>
+                    <div>lastUpdatedDate (date),</div>
+                    <div>legalBusinessName (string),</div>
+                    <div>doingBusinessAsName (string, optional),</div>
+                    <div>companyDivision (string, optional),</div>
+                    <div>divisionNumber (string, optional),</div>
+                    <div>samAddress (#/definitions/SamAddress, optional),</div>
+                    <div>congressionalDistrict (string, optional),</div>
+                    <div>businessStartDate (date, optional),</div>
+                    <div>fiscalYearCloseDay (string, optional),</div>
+                    <div>corporateUrl (string),</div>
+                    <div>corporateStructureCode (string) = ['2J' or '2K' or '2L' or '8H' or '2A' or 'CY' or 'X6' or 'ZZ'],</div>
+                    <div>corporateStructureDescription (string, optional),</div>
+                    <div>mailingAddress (#/definitions/SamAddress),</div>
+                    <div>stateOfIncorporation (string, optional),</div>
+                    <div>countryOfIncorporation (string, optional),</div>
+                    <div>govtBusinessPoc (#/definitions/SamPointOfContact, optional),</div>
+                    <div>altGovtBusinessPoc (#/definitions/SamPointOfContact, optional),</div>
+                    <div>pastPerformancePoc (#/definitions/SamPointOfContact, optional),</div>
+                    <div>altPastPerformancePoc (#/definitions/SamPointOfContact, optional),</div>
+                    <div>electronicBusinessPoc (#/definitions/SamPointOfContact, optional),</div>
+                    <div>altElectronicBusinessPoc (#/definitions/SamPointOfContact, optional),</div>
+                    <div>creditCardUsage (boolean, optional),</div>
+                    <div>hasDelinquentFederalDebt (boolean, optional),</div>
+                    <div>hasKnownExclusion (boolean, optional),</div>
+                    <div>correspondenceFlag (string, optional) = ['M' or 'F' or 'E'],</div>
+                    <div>status (string) = ['ACTIVE' or 'EXPIRED' or 'WIP'],</div>
+                    <div>statusMessage (string, optional),</div>
+                    <div>businessTypes (array[string]),</div>
+                    <div>sbaCertificationExpirationDate (date, optional),</div>
+                    <div>disasterRelief (array[object], optional),</div>
+                    <div>pscCodes (array[object], optional),</div>
+                    <div>certifications (object, optional),</div>
+                    <div>qualifications (object, optional)</div>
+                    } </div>
+                  <div>
+                    <pre>{    &quot;duns&quot;: &quot;string&quot;,    &quot;duns4&quot;: &quot;string&quot;,    &quot;cage&quot;: &quot;string&quot;,    &quot;ncage&quot;: &quot;string&quot;,    &quot;dodaac&quot;: &quot;string&quot;,    &quot;purposeOfRegistration&quot;: &quot;string&quot;,    &quot;registrationDate&quot;: &quot;date&quot;,    &quot;expirationDate&quot;: &quot;date&quot;,    &quot;activationDate&quot;: &quot;date&quot;,    &quot;lastUpdatedDate&quot;: &quot;date&quot;,    &quot;legalBusinessName&quot;: &quot;string&quot;,    &quot;doingBusinessAsName&quot;: &quot;string&quot;,    &quot;companyDivision&quot;: &quot;string&quot;,    &quot;divisionNumber&quot;: &quot;string&quot;,    &quot;samAddress&quot;: &quot;#/definitions/SamAddress&quot;,    &quot;congressionalDistrict&quot;: &quot;string&quot;,    &quot;businessStartDate&quot;: &quot;date&quot;,    &quot;fiscalYearCloseDay&quot;: &quot;string&quot;,    &quot;corporateUrl&quot;: &quot;string&quot;,    &quot;corporateStructureCode&quot;: &quot;string&quot;,    &quot;corporateStructureDescription&quot;: &quot;string&quot;,    &quot;mailingAddress&quot;: &quot;#/definitions/SamAddress&quot;,    &quot;stateOfIncorporation&quot;: &quot;string&quot;,    &quot;countryOfIncorporation&quot;: &quot;string&quot;,    &quot;govtBusinessPoc&quot;: &quot;#/definitions/SamPointOfContact&quot;,    &quot;altGovtBusinessPoc&quot;: &quot;#/definitions/SamPointOfContact&quot;,    &quot;pastPerformancePoc&quot;: &quot;#/definitions/SamPointOfContact&quot;,    &quot;altPastPerformancePoc&quot;: &quot;#/definitions/SamPointOfContact&quot;,    &quot;electronicBusinessPoc&quot;: &quot;#/definitions/SamPointOfContact&quot;,    &quot;altElectronicBusinessPoc&quot;: &quot;#/definitions/SamPointOfContact&quot;,    &quot;creditCardUsage&quot;: &quot;boolean&quot;,    &quot;hasDelinquentFederalDebt&quot;: &quot;boolean&quot;,    &quot;hasKnownExclusion&quot;: &quot;boolean&quot;,    &quot;correspondenceFlag&quot;: &quot;string&quot;,    &quot;status&quot;: &quot;string&quot;,    &quot;statusMessage&quot;: &quot;string&quot;,    &quot;businessTypes&quot;: [      &quot;string&quot;    ],    &quot;sbaCertificationExpirationDate&quot;: &quot;date&quot;,    &quot;disasterRelief&quot;: [      &quot;object&quot;    ],    &quot;pscCodes&quot;: [      &quot;object&quot;    ],    &quot;certifications&quot;: &quot;object&quot;,    &quot;qualifications&quot;: &quot;object&quot;</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</section>
